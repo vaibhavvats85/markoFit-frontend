@@ -1,0 +1,36 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 230px;
+  box-shadow: 0px 0 6px rgba(15, 14, 14, 0.24);
+}
+
+.list-filter{
+  width: 230px;
+  height: 150px;
+  box-shadow: 0px 0 6px rgba(15, 14, 14, 0.24);
+  margin-top: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgba(28, 109, 201, 0.24);
+}
+.menubar-color{
+  background-color:rgb(94, 136, 214);
+}
+.title-filter{
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 50px;
+
+}
+
+.menu-filter{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  background-color:rgba(9, 148, 106, 0.24);
+}
+
+.toolbar-filter{
+  background-color:rgba(163, 168, 196, 0.24);
+}
+

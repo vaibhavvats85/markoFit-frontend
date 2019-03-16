@@ -1,0 +1,50 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">
+        <span class="title-filter">markoFit</span>
+     <!-- <span class="menu-filter"> MENU </span> -->
+    </mat-toolbar>
+    <mat-nav-list>
+      <a class="list-filter" mat-list-item routerLink="news" routerLinkActive="active" >News</a>
+      <a class="list-filter" mat-list-item routerLink="techVisual">Technical Visualization</a>
+      <a class="list-filter" mat-list-item routerLink="techAnalysis">Technical Analysis</a>
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar-filter">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button 
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+     <span>News</span>
+     
+     
+     <!-- <mat-select placeholder="Source" (selectionChange)="sourceEvent($event.value)">
+      <mat-option *ngFor="let source of source" [value]="source.name" >
+        {{source.name}}
+      </mat-option>
+    </mat-select>
+     -->
+  </mat-toolbar>
+    
+    
+    <!--Component Routing -->
+    <div fxLayoutAlign="center">
+    <router-outlet ></router-outlet>
+  </div>
+  
+</mat-sidenav-content>
+  
+</mat-sidenav-container>
+
