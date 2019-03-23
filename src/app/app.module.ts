@@ -12,6 +12,8 @@ import { TechnicalVisualizationComponent } from './routes/technical-visualizatio
 import { RouterModule } from '@angular/router';
 import { appRoute } from 'src/routerConfig';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import { MarkofitService } from './services/markofit-service.service';
 
 @NgModule({
   declarations: [
@@ -30,12 +32,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatCardModule,
     MatSelectModule,
     MatIconModule,
     MatListModule,
     // FlexLayoutModule
   ],
-  providers: [],
+  providers: [MarkofitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

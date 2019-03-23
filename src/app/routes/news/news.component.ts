@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
-
+import { MarkofitService } from 'src/app/services/markofit-service.service';
+import { Headlines } from 'src/app/models/headlines';
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -7,10 +8,16 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
-  
+  topHeadlines: Headlines;
+
+  constructor(private service: MarkofitService) { }
   ngOnInit() {
-    
+    this.service.getHeadlines().subscribe((data: Headlines) => {
+        this.topHeadlines = data;
+    });
   }
 
+  getArticles() {
+    return this.topHeadlines.articles;
+  }
 }
