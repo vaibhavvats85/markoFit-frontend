@@ -1,3 +1,32 @@
-.padding {
-    padding-left: 20px;
-};
+.mat-card {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.mat-card-title {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: medium;
+}
+.mat-card-content:hover {
+    color: cadetblue;
+}
+.mat-card-avatar {
+    height: 120px;
+    width: 150px;
+    border-radius: 10%;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.mat-card-content {
+    margin-top: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    font-style: italic;
+    cursor: pointer;
+}
+.mat-card-footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    color: green;
+}

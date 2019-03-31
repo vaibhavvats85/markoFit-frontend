@@ -16,8 +16,13 @@ export class NewsComponent implements OnInit {
         this.topHeadlines = data;
     });
   }
-
   getArticles() {
     return this.topHeadlines.articles;
+  }
+  goToSource(url): void {
+    window.open(url);
+  }
+  goToImage(image): void {
+    window.open(image);
   }
 }
